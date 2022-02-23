@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const CircleAvatar(
-              radius: 55.0,
+              radius: 70.0,
               backgroundImage: AssetImage('images/mypic.png'),
             ),
             const SizedBox(
@@ -47,59 +47,48 @@ class MyApp extends StatelessWidget {
               margin: const EdgeInsets.fromLTRB(30.0, 20.0, 30.0, 10.0),
               color: Colors.white,
             ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),
-              padding: const EdgeInsets.symmetric(horizontal: 50.0,vertical: 0.0),
-              color: Colors.white,
-              width: 500.0,
-              height: 50.0,
-                child: Row(
-                  children: const [
-                    Icon(
+            const Card(
+              margin: EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),
+                child: Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.phone,
                       color: Colors.blue,
+                      size: 40.0,
                     ),
-                    SizedBox(
-                      width: 10.0,
+                    title: Text('+91 9800515347',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 20.0,
+                        fontFamily: 'SourceSansPro-Regular.ttf',
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    Text('+91 9800515347',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 20.0,
-                      fontFamily: 'SourceSansPro-Regular.ttf',
-                      fontWeight: FontWeight.bold,
-                    ),
-                    ),
-                  ],
+                  )
                 ),
               ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),
-              padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 0.0),
-              color: Colors.white,
-              width: 500.0,
-              height: 50.0,
-              child: Row(
-                children: const [
-                  Icon(
+            const Card(
+              margin: EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),
+              child: Padding(
+                padding: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon(
                     Icons.email,
                     color: Colors.blue,
+                    size: 40.0,
                   ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text('toushikbanikofficial@gmail.com',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 16.0,
-                      fontFamily: 'SourceSansPro-Regular.ttf',
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
+                  title: Text('toushikbanikofficial@gmail.com',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 16.0,
+                        fontFamily: 'SourceSansPro-Regular.ttf',
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
               ),
             ),
-
+            ),
           ],
         ),
         ),
@@ -107,4 +96,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
